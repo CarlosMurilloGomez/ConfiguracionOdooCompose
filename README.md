@@ -6,11 +6,11 @@ Para configurar Odoo con compose, primero hay que crearse los archivos docker-co
     -log
     -docker-compose-yml
     
-Ahora con el PowerShell de windows hay que ir a la carpeta principal (DockerCompose) y ejecutar "docker-compose up -d" para que se ejecute la configuración
+Ahora con el PowerShell de windows hay que ir a la carpeta principal (DockerCompose) y ejecutar "docker compose up" para que se ejecute la configuración
 
 Para crear un módulo de Odoo, vamos al Docker y ejecutamos el contenedor "dockercompose". Ahora, en el contenedor "web-1" (dentro del contenedor "dockercompose") hay que darle a "Open in terminal" y ejecutar los siguientes comandos("dam" será el nombre del módulo): 
   -> cd mnt/extra-addons
-  -> docker scaffold dam
+  -> odoo scaffold dam
 
 Ahora iremos a DockerCompose/dev_addons/dam y descomentaremos unas cuantas lineas de codigo:
  -Del archivo models/models.py descomentaremos las lineas de la 3 a la 10
